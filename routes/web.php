@@ -12,5 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing-page');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/reademail', function () {
+    return view('reademail');
+});
+
+Route::get('/form-biodata', function () {
+    return view('form-biodata');
+});
+
+Route::get('/login', function () {
+    return view('login');
 });
