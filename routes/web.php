@@ -23,30 +23,12 @@ Route::get('/reademail', function () {
     return view('reademail');
 });
 
-Route::prefix('form-biodata')->group(function () {
-    Route::get('/', "BiodataController@index")->name('form-biodata');
-    Route::post('/provinsi', "BiodataController@getProvinsiByCountryId")->name('provinsi-biodata');
-    Route::post('/kabupaten', "BiodataController@getKabupatenByProvinsiId")->name('kabupaten-biodata');
+Route::get('/form-biodata', function () {
+    return view('form-biodata');
 });
-
-
 
 Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/form-pendidikan', function () {
-    return view('form-pendidikan');
-});
-
-Route::get('/form-kursus', function () {
-    return view('form-kursus');
-});
-
-Route::get('/form-organisasi', function () {
-    return view('form-organisasi');
-});
-
-Route::get('/form-proyek', function () {
-    return view('form-proyek');
-});
+Route::post('/login', 'UserController@login');

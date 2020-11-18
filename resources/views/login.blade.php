@@ -28,23 +28,41 @@
         <img src="../../images/haki.jpg" style="width: 100px;" class="mb-3">
       </div>
 
-      <form action="{{ url('/dashboard') }}">
+      <form action="{{ url('/login') }}" method="post">
+        @csrf
+        @if ($message = Session::get('alert'))
+        <div class="alert alert-danger alert-block">
+          <button type="button" class="close" data-dismiss="alert">×</button> 
+          <strong>{{ $message }}</strong>
+        </div>
+        @endif
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" name="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
         </div>
+        @error('email')
+        <div class="text-danger">{{ $message }}</div>
+        @enderror
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="password" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
         </div>
+        @error('password')
+        <div class="text-danger">{{ $message }}</div>
+        @enderror
+        <div class="g-recaptcha mb-2" data-sitekey="{{ env('CAPTCHA_KEY') }}">
+        </div>
+        @if($errors->has('g-recaptcha-response'))
+        <div class="text-danger">{{ $errors->first('g-recaptcha-response') }}</div>
+        @endif
         <div class="row">
           <div class="col-12">
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
@@ -71,6 +89,8 @@
 <script src="{{ url('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ url('dist/js/adminlte.min.js') }}"></script>
+<!-- Google Recaptcha -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
 </body>
 </html>
