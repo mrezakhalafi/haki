@@ -26,6 +26,10 @@
   <link rel="stylesheet" href="{{ url('plugins/summernote/summernote-bs4.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <!-- MY CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
+
   @yield('css')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -102,23 +106,16 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="{{ url('/form-kursus') }}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Form Data Kursus
               </p>
             </a>
           </li>
+          
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Form Data Kursus
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="{{ url('/form-pendidikan') }}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Form Data Pendidikan
@@ -126,7 +123,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="{{ url('/form-organisasi') }}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Form Data Organisasi
@@ -134,14 +131,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="{{ url('/form-proyek') }}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Form Data Proyek
               </p>
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Klasifikasi & Kualifikasi
+              </p>
+            </a>
+          </li>
           
           <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
@@ -203,6 +207,8 @@
 <script src="{{ url('dist/js/pages/dashboard.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ url('dist/js/demo.js') }}"></script>
+<!-- MY JS -->
+<script src="{{ url('js/script.js') }}"></script>
 
 @yield('js')
 </body>

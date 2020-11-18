@@ -1,0 +1,12 @@
+.badge-id {
+	
+	height: 35px; 
+	display: flex; 
+	align-items: center; 
+	background-color: #f3f3f3; 
+	border-left: 3px solid #007bff;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
