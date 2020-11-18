@@ -138,12 +138,9 @@ HAKI
                         <label>Upload KTP <span class="text-danger">*</span></label>
                         <div class="input-group">
                           <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="uploadKtp-biodata">
-                            <label class="custom-file-label" for="uploadKtp-biodata"></label>
+                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                            <label class="custom-file-label" for="exampleInputFile">Pilih File</label>
                           </div>
-                          {{-- <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                          </div> --}}
                         </div>
                       </div>
 
@@ -152,11 +149,8 @@ HAKI
                         <div class="input-group">
                           <div class="custom-file">
                             <input type="file" class="custom-file-input" id="exampleInputFile">
-                            <label class="custom-file-label" for="exampleInputFile">Chrysanthemum.jpg</label>
+                            <label class="custom-file-label" for="exampleInputFile">Pilih File</label>
                           </div>
-                          {{-- <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                          </div> --}}
                         </div>
                       </div>
 
@@ -165,11 +159,8 @@ HAKI
                         <div class="input-group">
                           <div class="custom-file">
                             <input type="file" class="custom-file-input" id="exampleInputFile">
-                            <label class="custom-file-label" for="exampleInputFile">Chrysanthemum.jpg</label>
+                            <label class="custom-file-label" for="exampleInputFile">Pilih File</label>
                           </div>
-                          {{-- <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                          </div> --}}
                         </div>
                       </div>
                     </div>
@@ -192,11 +183,8 @@ HAKI
                         <div class="input-group">
                           <div class="custom-file">
                             <input type="file" class="custom-file-input" id="exampleInputFile">
-                            <label class="custom-file-label" for="exampleInputFile">Chrysanthemum.jpg</label>
+                            <label class="custom-file-label" for="exampleInputFile">Pilih File</label>
                           </div>
-                          {{-- <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                          </div> --}}
                         </div>
                       </div>
 
@@ -205,11 +193,8 @@ HAKI
                         <div class="input-group">
                           <div class="custom-file">
                             <input type="file" class="custom-file-input" id="exampleInputFile">
-                            <label class="custom-file-label" for="exampleInputFile">Chrysanthemum.jpg</label>
+                            <label class="custom-file-label" for="exampleInputFile">Pilih File</label>
                           </div>
-                          {{-- <div class="input-group-append">
-                            <span class="input-group-text" id="">Upload</span>
-                          </div> --}}
                         </div>
                       </div>
 

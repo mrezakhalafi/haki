@@ -28,6 +28,10 @@
   <link rel="stylesheet" href="{{ url('plugins/summernote/summernote-bs4.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <!-- MY CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url('css/style.css') }}">
+
   @yield('css')
 </head>
 
@@ -84,130 +88,133 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-item">
-              <a href="{{ url('/dashboard') }}" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Dashboard
-                  <span class="badge badge-info right">2</span>
-                </p>
-              </a>
-            </li>
 
+          <li class="nav-item">
+            <a href="{{ url('/dashboard') }}" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <span class="badge badge-info right">2</span>
+              </p>
+            </a>
+          </li>
+          
+          
+          <li class="nav-header">FORM</li>
+          <li class="nav-item">
+            <a href="{{ url('/form-biodata') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Form Data Diri
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('/form-kursus') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Form Data Kursus
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="{{ url('/form-pendidikan') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Form Data Pendidikan
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('/form-organisasi') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Form Data Organisasi
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('/form-proyek') }}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Form Data Proyek
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Klasifikasi & Kualifikasi
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-header">MISCELLANEOUS</li>
+          <li class="nav-item">
+            <a href="https://adminlte.io/docs/3.0" class="nav-link">
+              <i class="nav-icon fas fa-file"></i>
+              <p>Documentation</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
 
-            <li class="nav-header">FORM</li>
-            <li class="nav-item">
-              <a href="{{ url('/form-biodata') }}" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Form Data Diri
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/gallery.html" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Form Data Kursus
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/gallery.html" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Form Data Kursus
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/gallery.html" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Form Data Pendidikan
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/gallery.html" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Form Data Organisasi
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/gallery.html" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                  Form Data Proyek
-                </p>
-              </a>
-            </li>
+  @yield('content')
 
+  
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2020 HAKI</a></strong>
+    All rights reserved.
+  </footer>
 
-            <li class="nav-header">MISCELLANEOUS</li>
-            <li class="nav-item">
-              <a href="https://adminlte.io/docs/3.0" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
-                <p>Documentation</p>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
+</div>
+<!-- ./wrapper -->
 
-    @yield('content')
+<!-- jQuery -->
+<script src="{{ url('plugins/jquery/jquery.min.js') }}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{ url('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{{ url('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- ChartJS -->
+<script src="{{ url('plugins/chart.js/Chart.min.js') }}"></script>
+<!-- Sparkline -->
+<script src="{{ url('plugins/sparklines/sparkline.js') }}"></script>
+<!-- JQVMap -->
+<script src="{{ url('plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+<script src="{{ url('plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{ url('plugins/jquery-knob/jquery.knob.min.js') }}"></script>
+<!-- daterangepicker -->
+<script src="{{ url('plugins/moment/moment.min.js') }}"></script>
+<script src="{{ url('plugins/daterangepicker/daterangepicker.js') }}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{{ url('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+<!-- Summernote -->
+<script src="{{ url('plugins/summernote/summernote-bs4.min.js') }}"></script>
+<!-- overlayScrollbars -->
+<script src="{{ url('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<!-- AdminLTE App -->
+<script src="{{ url('dist/js/adminlte.js') }}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{ url('dist/js/pages/dashboard.js') }}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ url('dist/js/demo.js') }}"></script>
+<!-- MY JS -->
+<script src="{{ url('js/script.js') }}"></script>
 
-
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-      <strong>Copyright &copy; 2020 HAKI</a></strong>
-      All rights reserved.
-    </footer>
-
-  </div>
-  <!-- ./wrapper -->
-
-  <!-- jQuery -->
-  <script src="{{ url('plugins/jquery/jquery.min.js') }}"></script>
-  <!-- jQuery UI 1.11.4 -->
-  <script src="{{ url('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
-  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-  <script>
-    $.widget.bridge('uibutton', $.ui.button)
-  </script>
-  <!-- Bootstrap 4 -->
-  <script src="{{ url('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <!-- ChartJS -->
-  <script src="{{ url('plugins/chart.js/Chart.min.js') }}"></script>
-  <!-- Sparkline -->
-  <script src="{{ url('plugins/sparklines/sparkline.js') }}"></script>
-  <!-- JQVMap -->
-  <script src="{{ url('plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-  <script src="{{ url('plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
-  <!-- jQuery Knob Chart -->
-  <script src="{{ url('plugins/jquery-knob/jquery.knob.min.js') }}"></script>
-  <!-- daterangepicker -->
-  <script src="{{ url('plugins/moment/moment.min.js') }}"></script>
-  <script src="{{ url('plugins/daterangepicker/daterangepicker.js') }}"></script>
-  <!-- Tempusdominus Bootstrap 4 -->
-  <script src="{{ url('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
-  <!-- Summernote -->
-  <script src="{{ url('plugins/summernote/summernote-bs4.min.js') }}"></script>
-  <!-- overlayScrollbars -->
-  <script src="{{ url('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
-  <!-- AdminLTE App -->
-  <script src="{{ url('dist/js/adminlte.js') }}"></script>
-  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <script src="{{ url('dist/js/pages/dashboard.js') }}"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="{{ url('dist/js/demo.js') }}"></script>
-
-  @yield('js')
+@yield('js')
 </body>
 
 </html>
